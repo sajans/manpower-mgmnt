@@ -1,0 +1,71 @@
+ 
+
+@page {
+    margin: 0.5cm;
+}
+@page :left {
+    margin: 0.5cm;
+}
+
+@page :right {
+    margin: 0.8cm;
+}
+@page :first {
+    margin: 1cm 2cm;
+} 
+
+@media  print
+{
+    fieldset,.span11,.span12{
+        display:none;
+    }
+    #img-wrapper{
+        float:right;
+        border:none;
+        height: 100px;
+        width: 120px;
+    }
+    body {
+        margin:0;
+        padding:0; 
+        line-height: 1.4em; 
+        word-spacing:1px; 
+        letter-spacing:0.2px; 
+        font: 13px Arial, Helvetica,"Lucida Grande", serif; 
+        color: #000;
+    }
+
+
+    a:link, a:visited {background: transparent; color:#333; text-decoration:none;}
+    a:link[href^="http://"]:after, a[href^="http://"]:visited:after {content: " (" attr(href) ") "; font-size: 11px;}
+    a[href^="http://"] {color:#000;} 
+
+    .print-data{
+        height:3508;
+        width:2480;
+        display: block; page-break-before: always;
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+@media screen and (max-width:8.5in) { /* resize your window until the event is triggered */
+    html { width:8.5in; }
+    body { font: 9pt/1.5 Arial, sans-serif; } /* Roughly 12px font */
+
+}
+
+
+

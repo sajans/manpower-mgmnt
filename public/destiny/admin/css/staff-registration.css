@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {margin:10px;}
+
+.clear {clear:both;}
+label.error {font-family:calibri, aril, sans-serif; font-size:11px; color:#FF0000; display:block;}
+
+div.form-wrap {width:970px; height:auto; margin:auto; border:1px solid #e4e4e4; font-size:14px; font-family:Verdana, Geneva, sans-serif;}
+div.form-wrap label {font-size:14px; font-weight:normal; color:#000;}
+div.form-wrap .header {width:928px; height:auto; margin:0px 0px 10px 0px; padding:0px 0px 0px 10px; border-left:32px solid #c2c2c2; line-height:32px; 
+background-color:#ebebeb; font-size:16px; font-weight:bold; float:left;}
+div.form-wrap .left {width:440px; height:auto; margin:10px 0px 0px 10px; float:left;}
+div.form-wrap .left .row {width:440px; height:auto; margin:5px 0px; padding:0px; text-align:right;}
+div.form-wrap .left p { height:auto; margin:0px; float:left;}
+div.form-wrap .left .bar-wrap {width:440px; height:auto; margin:0px; padding:0px; float:left;} 
+div.form-wrap .left .bar1 {width:200px; height:auto; margin:0px 0px 10px 10px;  padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .left .bar1 select {width:210px; height:28px; font-size:14px; color:#000; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+div.form-wrap .left .bar2 {width:126px; height:auto; margin:0px 0px 10px 10px; padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .left .bar2 a {font-size:12px; color:#06C; text-decoration:underline; margin:0px; padding:0px; float:right;}
+div.form-wrap .left .bar2 a:hover {font-size:12px; color:#06C; text-decoration:none; margin:0px; float:right; padding:0px;}
+div.form-wrap .left .bar2-btm {width:126px; height:auto; margin:47px 0px 10px 10px; padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .left .bar3 {width:272px; height:auto; margin:0px 0px 10px 10px; padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .left .title {width:420px; height:23px; margin:20px 0px 0px 20px; float:left; font-size:14px; font-weight:bold; color:#000000;}
+
+
+div.form-wrap .right {width:440px; float:left; margin:10px 0px 0px 40px; padding:0px; height:auto;}
+div.form-wrap .right .bar1 {width:200px; height:auto; margin:0px 0px 10px 10px;  padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .right select {width:210px; height:28px; font-size:14px; color:#000; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+div.form-wrap .right .box {width:406px; float:left; margin:10px 0px 0px 20px; padding:10px 10px 10px 10px; height:auto; background-color:#e4e4e4; border:1px solid #c5c5c5;}
+div.form-wrap .right .box p {width:400px; height:auto; margin:0px 0px 10px 0px; float:left; padding:0px;}
+div.form-wrap .right .box label {width:180px; height:23px; float:left; margin:0px; padding:5px 0px 0px 0px;}
+div.form-wrap .right .box input  {width:208px; height:21px; float:left; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+div.form-wrap .right .box input.appt  {width:108px; height:21px; float:right; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+div.form-wrap .right .box .2appt {width:400px; height:23px; float:left; margin:0px; padding:0px 0px 0px 0px;}
+div.form-wrap .right .box .2appt label {width:250px; height:23px; float:left; margin:0px; padding:0px 0px 0px 0px;}
+div.form-wrap .right .box span  {width:208px; height:21px; float:left; font-size:14px; font-weight:bold; color:#000;}
+div.form-wrap .right .box .radio {width:12px; height:12px;}
+div.form-wrap .right .box .leb {width:100px; height:auto; float:left; margin:0px; font-size:14px; font-weight:normal;}
+div.form-wrap .right .box .title {font-size:14px; color:#000000; margin:0px; padding:0px;}
+div.form-wrap .right .box button.edit {width:80px; height:30px; cursor:pointer; float:left; margin:0px 0px 0px 5px;}
+div.form-wrap .right .box .exp {width:400px; height:23px; float:left; margin:5px 0px 0px 0px; padding:0px 0px 0px 0px; font-size:14px; font-weight:normal;}
+div.form-wrap .right .box .change-date {width:200px; height:23px; float:left; margin:0px; padding:0px 0px 0px 0px; font-size:14px; font-weight:normal;}
+div.form-wrap .right .box .exp-date {width:150px; text-align:right; height:23px; float:right; margin:0px; padding:0px 0px 0px 0px; font-size:14px; font-weight:normal;}
+div.form-wrap .right .box select {width:220px; height:28px; font-size:14px; color:#000; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+
+div.form-wrap .btm-wrap {width:970px; height:auto; margin:10px 0px 0px 0px; padding:0px; float:left;}
+div.form-wrap .btm-wrap .btm-left {width:272px; height:auto; margin:12px 0px 10px 22px; padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .btm-wrap .btm-left p {width:272px; height:auto; padding:0px; margin:0px 0px 10px 0px; float:left;}
+div.form-wrap .btm-wrap .btm-left span {width:272px; float:left; font-size:14px; font-weight:bold; color:#000; margin:0px 0px 0px 0px;}
+div.form-wrap .btm-wrap .btm-left label {width:100px; height:23px; float:left; margin:0px; padding:5px 0px 0px 0px;}
+div.form-wrap .btm-wrap .btm-left input {width:160px; height:21px; float:left; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+
+div.form-wrap .btm-wrap .btm-right {width:610px; height:auto; margin:0px 0px 10px 22px; padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .btm-wrap .btm-right p {width:610px; padding:0px; margin:0px 0px 25px 0px; float:left;}
+div.form-wrap .btm-wrap .btm-right label {width:600px; height:23px; float:left; margin:0px; padding:5px 0px 0px 0px;}
+div.form-wrap .btm-wrap .btm-right input {width:590px; height:21px; float:left; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+div.form-wrap .btm-wrap .btm-right textarea {width:590px; height:113px; float:left; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#e4e4e4; border:1px solid #d9d6d6;}
+div.form-wrap .left select {width:136px; height:28px; font-size:14px; color:#000; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+.feilds-1 {width:198px; height:21px; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+.feilds-2 {width:126px; height:21px; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+.feilds-3 {width:272px; height:21px; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+.feilds-4 {width:272px; height:21px; font-size:14px; color:#666666; margin:0px 0px 5px 0px; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+
+.feilds-5 {width:89px; height:21px; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+.feilds-6 {width:120px; height:21px; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+
+.feilds-sd {width:79px; height:29px; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+.feilds-sel {width:190px; height:29px; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+
+
+/*search staff*/
+
+div.form-wrap .bar-top {width:950px; height:auto; margin:10px 0px 0px 10px; float:left;}
+div.form-wrap .bar-btn {width:200px; height:auto; margin:10px 0px 20px 730px; float:left; text-align:right;}
+div.form-wrap .bar-btn  button.edit {width:80px; height:30px; cursor:pointer; float:left; margin:0px 0px 0px 5px;}
+div.form-wrap .searchresult  {width:970px; height:auto; float:left; margin:0px;}
+div.form-wrap .searchresult .head {width:940px; height:auto; line-height:32px;  margin:10px 0px 0px 0px; float:left; background-color:#ebebeb; font-size:16px; font-weight:bold; border-top:1px solid #c2c2c2; padding:0px 0px 0px 30px;}
+div.form-wrap .searchresult .result {width:940px; height:auto; float:left; margin:10px 10px 0px 30px;}
+.col-1 {line-height:23px; border-top:1px solid #c2c2c2; border-left:1px solid #c2c2c2; font-size:14px; padding:0px 0px 0px 5px;}
+.col-btm {line-height:23px; border-bottom:1px solid #c2c2c2; border-top:1px solid #c2c2c2; border-left:1px solid #c2c2c2;}
+.col-2 {line-height:23px; border-top:1px solid #c2c2c2; border-left:1px solid #c2c2c2; border-right:1px solid #c2c2c2;}
+.col-2-btm {line-height:23px; border-bottom:1px solid #c2c2c2; border-top:1px solid #c2c2c2; border-left:1px solid #c2c2c2; border-right:1px solid #c2c2c2;}
+.pad {margin:0px 0px 0px 10px;}
+
+.link1 {font-size:12px; color:#06C; padding:0px; margin:0px 10px 0px 10px; text-decoration:underline;}
+.link1:hover {font-size:12px; color:#06C; padding:0px; margin:0px 10px 0px 10px; text-decoration:underline;}
+div.form-wrap .bar-top .col {width:210px; height:auto; margin:0px 0px 10px 10px;  padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .bar-top .col-ss {width:210px; height:auto; margin:0px 0px 10px 0px;  padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .bar-top .col-11 {width:130px; height:auto; margin:0px 0px 10px 0px;  padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .bar-top .col-22 {width:95px; height:auto; margin:0px 0px 10px 0px;  padding:0px 0px 0px 10px; float:left;}
+
+div.form-wrap .details  {width:970px; height:auto; float:left; margin:10px 0px 20px 0px;}
+div.form-wrap .details .head {width:940px; height:auto; line-height:32px;  margin:10px 0px 0px 0px; float:left; background-color:#ebebeb; font-size:16px; font-weight:bold; border-top:1px solid #c2c2c2; padding:0px 0px 0px 30px;}
+div.form-wrap .details .d1 {width:180px; height:23px; float:left; margin:10px 10px 0px 29px; font-size:14px; }
+div.form-wrap .details .d2 {width:180px; height:23px; float:right; margin:10px 43px 0px 20px; font-size:14px; }
+
+
+div.form-wrap .left2 {width:440px; height:auto; margin:53px 0px 10px 10px; float:left;}
+div.form-wrap .left2  p { height:auto; margin:0px; float:left;}
+div.form-wrap .left2 .bar-wrap {width:440px; height:auto; margin:0px; padding:0px; float:left;} 
+div.form-wrap .left2 .bar1 {width:200px; height:auto; margin:0px 0px 10px 10px;  padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .left2 .bar1 select {width:210px; height:28px; font-size:14px; color:#000; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+div.form-wrap .left2 .bar2 {width:126px; height:auto; margin:0px 0px 10px 10px; padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .left2 .bar2-btm {width:126px; height:auto; margin:57px 0px 10px 10px; padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .left2 .bar3 {width:272px; height:auto; margin:0px 0px 10px 10px; padding:0px 0px 0px 10px; float:left;}
+div.form-wrap .left2 .bar3 p {margin:0px 0px 22px 0px; padding:0px; width:172px; float:left;}
+div.form-wrap .left2 .bar3 label {margin:0px 0px 0px 0px; padding:0px; width:172px; float:left;}
+div.form-wrap .left2 .title {width:420px; height:23px; margin:20px 0px 0px 20px; float:left; font-size:14px; font-weight:bold; color:#000000;}
+div.form-wrap .left2 .goto {width:451px; height:auto; margin:0px 0px 20x 0px; padding:0px; float:left; text-align:right;} 
+div.form-wrap .left2 .goto button.go {width:200px; height:30px; cursor:pointer; float:left; margin:0px 0px 0px 5px;}
+.feilds-cd {width:83px; height:21px; font-size:14px; color:#666666; padding:3px 5px 3px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+/* ==== 21 june===== */
+div.form-wrap .schedule-h {width:928px; height:auto; margin:0px 0px 10px 0px; padding:0px 0px 0px 10px; border-left:32px solid #c2c2c2; line-height:32px; 
+background-color:#ebebeb; font-size:16px; font-weight:bold; float:left;}
+div.menu-left {width:15px; float:left; height:30px;}
+
+div.form-wrap .schedule-h .left {width:600px; height:auto; float:left; margin:0px;}
+div.form-wrap .schedule-h .right {width:323px; height:auto; float:right; margin:0px;}
+div.form-wrap .schedule-h .right span {font-weight:normal; color:#333333; padding:0px 0px 0px 10px;}
+div.form-wrap .rows {width:910px; height:auto; margin:10px 0px 0px 30px; float:left;}
+div.form-wrap .rows .clm1 {width:230px; height:24px; margin:0px; float:left; padding:5px 0px 0px 10px;}
+div.form-wrap .rows .clm1 .title {width:60px; height:24px; margin:0px; padding:5px 10px 0px 0px; float:left;}
+div.form-wrap .rows .clm1 .feilds {width:130px; height:29px; margin:0px; float:left;}
+div.form-wrap .rows .clm1 span {font-weight:bold; color:#000; margin:0px; padding:0xp}
+div.form-wrap .rows .clm2 {width:280px; height:auto; margin:0px 0px 0px 10px; float:left;}
+
+div.form-wrap .rows .clm2 .title {width:80px; height:24px; margin:0px; padding:5px 10px 0px 0px; text-align:right; float:left;}
+div.form-wrap .rows .clm2 .feilds {width:180px; height:29px; margin:0px; float:left;}
+div.form-wrap .rows .clm2 {font-size:14px; font-weight:normal; color:#000;}
+div.form-wrap .rows .clm3 {width:60px; height:auto; margin:0px 0px 0px 10px; padding:0px; float:left;}
+div.form-wrap .rows .clm3 .chk {width:60px; height:18px; float:left; margin:-10px 0px 7px 0px; padding:0px 0px 5px 0px ; float:left;}
+div.form-wrap .rows .clm3 .chk p {width:20px; height:18px; padding:4px 9px 0px 0px; margin:0px 0px 0px 0px; float:right;}
+div.form-wrap input  {height:21px; font-size:14px; color:#666666; padding:2px 5px 2px 5px; background-color:#f6f5f1; border:1px solid #d9d6d6;}
+div.form-wrap radio {margin:0px; padding:0px;}
+
+div.form-wrap .schedule-wrap {width:910px; height:auto; margin:10px 0px 40px 30px; float:left;}
+div.form-wrap .schedule-wrap .left {width:900px; height:auto; margin:10px 0px 0px 10px; float:left;}
+div.form-wrap .schedule-wrap .left .hdr {width:900px; height:auto; float:left; margin:0px;}
+div.form-wrap .schedule-wrap .left .hdr .hd1 {width:167px; height:auto; float:left; margin:0px;}
+div.form-wrap .schedule-wrap .left .hdr .hd2 {width:130px; height:auto; float:left; margin:0px 0px 0px 170px; }
+div.form-wrap .schedule-wrap .left .hdr .hd3 {width:80px; height:auto; float:left; margin:0px;}
+div.form-wrap .schedule-wrap .left .hdr .hd4 {width:120px; height:auto; float:left; margin:0px 0px 0px 150px;}
+div.form-wrap .schedule-wrap .left .c1 {width:130px; height:auto; float:left; margin:0px; border-right:1px solid #CCC; border-left:1px solid #CCC; border-bottom:1px solid #CCC;}
+div.form-wrap .schedule-wrap .left .c1 p {width:125px; height:35px; padding:3px 0px 0px 5px; float:left; margin:0px; border-top:1px solid #CCC;}
+div.form-wrap .schedule-wrap .remark {910px; height:auto; margin:20px 0px 0px 10px; padding:0px; float:left;}
+div.form-wrap .schedule-wrap label {margin:0px 0px 0px 0px; padding:0px; width:900px; float:left;}
+div.form-wrap .schedule-wrap textarea {margin:7px 0px 0px 0px; padding:5px; width:880px; float:left; font-size:14px; color:#666666;  background-color:#f6f5f1; border:1px solid #d9d6d6;} 
+
+div.form-wrap .schedule-wrap .left .c2 {width:110px; height:auto; float:left; margin:0px 0px 0px 10px; border-right:1px solid #CCC; border-left:1px solid #CCC; border-bottom:1px solid #CCC;}
+div.form-wrap .schedule-wrap .left .c2 p {width:105px; height:35px; padding:3px 0px 0px 5px; float:left; margin:0px; border-top:1px solid #CCC;}
+
+div.form-wrap .schedule-wrap .left .c3 {width:120px; height:auto; float:left; margin:0px 0px 0px 10px; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #fff;}
+div.form-wrap .schedule-wrap .left .c3 p {width:115px; height:35px; padding:3px 0px 0px 5px; float:left; margin:0px; border-top:1px solid #fff;}
+div.form-wrap .schedule-wrap input {height:28px; margin:0px; padding:0px;  float:left; font-size:14px; color:#666666;  background-color:#f6f5f1; border:1px solid #d9d6d6;}
+
+div.form-wrap .right2 {width:400px; float:left; margin:10px 0px 0px 112px; padding:0px; height:auto;}
+div.form-wrap .right2 .bar {width:400px; float:left; margin:0px 0px 10px 0px; padding:0px; height:auto;}
+div.form-wrap .right2 .bar .reg-no {font-weight:bold; margin:0pc; padding:0px; text-decoration:underline; text-align:right;}
+div.form-wrap .right2 .pic {width:150px; height:116; float:right; margin:10px 25px 10px 10px; padding:0px; text-align:right;}
+div.form-wrap .right2 .bar .left {width:170px; height:auto; margin:0px; padding:0px; float:left;}
+div.form-wrap .right2 .bar .right {width:200px; height:auto; margin:0px; padding:0px; float:left;}
+div.form-wrap .right2 .bar2 {width:400px; float:left; margin:100px 0px 10px 0px; padding:0px; height:auto;}
+div.form-wrap .right2 .bar2 .title {width:400px; float:left; margin:0px 0px 10px 0px; padding:0px; height:auto;}
+div.form-wrap .right2 .bar2 .left {width:170px; height:auto; margin:0px 0px; padding:0px; float:left;}
+div.form-wrap .right2 .bar2 .right {width:200px; height:auto; margin:0px; padding:0px; float:left; text-align:right;}
+input.feilds-edit {width:100px; height:23px; font-size:14px; color:#666666; padding:0px 5px 6px 5px; margin:0px 0px 5px 0px;  background-color:#fff !important; border:1px solid #fff !important ;}
+.staff-detail-link{
+    background-image: url("./images/button.png");
+    background-repeat: no-repeat;
+    border-radius: 3px 3px 3px 3px;
+    color: black;
+    display: block;
+    font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+    font-size: 1em;
+    margin: 0 !important;
+    padding: 3px 3px 3px 15px;
+    text-decoration: none;
+}
+.address-field{
+    padding:0px;
+    margin:0px;
+    height:5px;
+}

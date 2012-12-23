@@ -1,0 +1,41 @@
+body { }
+
+.clear {clear:both;}
+
+div.form-text{
+    padding: 10px 10px 10px 10px;
+    margin: 2px 2px 2px 2px;
+    float: left;
+}
+
+#agent_span{
+    float:right;
+}
+
+.print-data{
+    /*float:right;*/
+    /*margin-right: 180px;*/
+/*    height: 3508px;
+    width: 2480px;*/
+}
+#img-wrapper{
+    float:right;
+    /*margin-right: 10px;*/
+    
+}
+#name-profession{
+    padding-top: 50px;
+}
+
+#date{
+    float: left;
+}
+
+#row2{
+    height:60px;
+}
+
+#legend-center{
+    float: left;
+    margin-left: 450px;
+}

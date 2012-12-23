@@ -1,0 +1,27 @@
+<script type="text/javascript" src="<?php echo $this->baseUrl() . '/common/js/jquery-ui-1.8.21.custom.min.js'; ?>"></script> 
+<script type="text/javascript" src="<?php echo $this->baseUrl() . '/common/js/jquery-1.7.2.min.js'; ?>"></script> 
+<fieldset>
+    <legend><h2>Edit Medical Report </h2></legend>
+    <?php
+    echo $this->form;
+    ?>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#candidate_id").live("change",function(){
+                var $that = $(this);
+                var amount = $.trim($(this).val());
+                console.log(amount);
+                var passportno = amount.split("::");
+                console.log(passportno[2]);
+                $("#passport").val(passportno[2]);
+            }); 
+            $("#add_company_id").live("change",function(){
+                var $that = $(this);
+                var amount = $.trim($(this).val());
+                console.log(amount);
+                var passportno = amount.split("::");
+                console.log(passportno[1]);
+                $("#id_number").val(passportno[1]);
+            }); 
+        });
+    </script>

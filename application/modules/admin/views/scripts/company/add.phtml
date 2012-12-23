@@ -1,0 +1,66 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php $form = $this->form->getElements(); ?>
+        <?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/bootstrap.css"); ?>
+        <?php
+        echo $this->headLink()
+                ->prependStylesheet($this->baseUrl() . '/destiny/admin/css/form.css')
+                ->prependStylesheet($this->baseUrl() . '/destiny/admin/css/style.css')
+                ->prependStylesheet($this->baseUrl() . '/destiny/admin/css/bootstrap.min.css')
+        ?>
+        <!-- Scripts -->
+        <?php
+        echo $this->headScript()->appendFile($this->baseUrl() . '/common/js/jquery-1.7.2.min.js');
+        echo $this->headScript()->appendFile($this->baseUrl() . '/common/js/jquery-ui-1.8.21.custom.min.js');
+        ?>
+    </head>
+    <form action="" method="post">
+        <fieldset class="span11">
+            <legend><h2>Add Company</h2></legend>
+            <div class="span12" id="row2">
+                <div class="span2"><label>Company Name</label></div>
+                <div class="span5"><?php echo $form["add_company_id"]; ?></div>
+            </div>
+            <div class="span12" id="row2">
+                <div class="span2"><label>ID Number</label></div>
+                <div class="span5"><?php echo $form["id_number"]; ?></div>
+            </div>
+            <div class="clear"></div>
+            <div class="span12" id="row2">
+                <div class="span2"><label>Visa Number</label></div>
+                <div class="span5"><?php echo $form["visa_number"]; ?></div>
+            </div>
+            <div class="clear"></div>
+            <div class="span12" id="row2">
+                <div class="span2"><label>Issued Date</label></div>
+                <div class="span5"><?php echo $form["date"]; ?></div>
+            </div>
+            <div class="clear"></div>
+            <div class="span12" id="row2">
+                <div class="span2"><label>Profession</label></div>
+                <div class="span5"><?php echo $form["ccat_id"]; ?></div>
+            </div>
+            <div class="clear"></div>
+            <?php echo $form['submit']; ?>  
+        </fieldset>
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".form-checkbox").live("click",function(){
+                var val = $(this).val().split("::");
+                var name = val[1];
+                var value = val[0];
+                var html = "Enter number of "+ name +"  <input class='candidate-number' type='text' name='number["+value+"]' value='' /><br />"
+                $("#number-wrapper").append(html);
+            });
+            $("#add_company_id").live("click",function(){
+                var $that = $(this);
+                var amount = $.trim($(this).val());
+                //console.log(amount);
+                var idno = amount.split("::");
+                //console.log(idno[0]);
+                $("#id_number").val(idno[1]);
+            }); 
+        });
+    </script>

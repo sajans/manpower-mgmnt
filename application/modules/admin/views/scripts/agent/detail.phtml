@@ -1,0 +1,38 @@
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/table.css"); ?>
+<div id="detail-nav">
+    <div class="edit_detail"><a href="<?php echo $this->url(array('controller' => 'agent', 'action' => 'edit')); ?>">Edit </a></div>
+    <div class="delete_detail"><a href="<?php echo $this->url(array('controller' => 'agent', 'action' => 'delete')); ?>">Delete</a></div>
+    <div class="back_detail"><a href="<?php echo $this->url(array('controller' => 'agent', 'action' => 'list')); ?>">Back</a></div>
+</div> <div class="clear"></div>
+<table id="table" >
+
+    <tr>
+        <th colspan="2"> Detail Information of Staff </th>
+    </tr>
+
+    <tr>
+        <th> Full Name     </th>
+        <td><?php echo $this->result['name']; ?></td>
+    </tr>
+    <tr>
+        <th> Sex       </th>
+        <td><?php echo $this->result['sex']; ?></td>
+    </tr>
+    <tr>
+        <th> Email </th>
+        <td><?php echo $this->result['email']; ?></td>
+    </tr>
+    <tr>
+        <th> Position </th>
+        <td><?php echo $this->result['phone']; ?></td>
+    </tr>
+    <tr>
+        <th> Phone </th>
+        <td><?php echo $this->result['phone1']; ?></td>
+    </tr>
+    <tr>
+        <th> Address </th>
+        <td><?php echo $this->result['address']; ?></td>
+    </tr>
+
+</table>

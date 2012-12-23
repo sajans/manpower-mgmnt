@@ -1,0 +1,110 @@
+<script type="text/javascript" src="<?php echo $this->baseUrl() . '/common/js/jquery-ui-1.8.21.custom.min.js'; ?>"></script> 
+<script type="text/javascript" src="<?php echo $this->baseUrl() . '/common/js/jquery-1.7.2.min.js'; ?>"></script>
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/form.css"); ?>
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/bootstrap.css"); ?>
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css//bootstrap.min.css"); ?>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl() . "/destiny/admin/printcss/candidate.css" ?>" media = "print"> 
+<div id="detail-nav">
+    <div class="edit_detail"><a href="<?php echo $this->url(array('controller' => 'candidate', 'action' => 'edit')); ?>">Edit </a></div>
+    <div class="delete_detail"><a href="<?php echo $this->url(array('controller' => 'candtidate', 'action' => 'delete')); ?>">Delete</a></div>
+    <div class="back_detail"><a href="<?php echo $this->url(array('controller' => 'candidate', 'action' => 'list')); ?>">Back</a></div>
+    <input id="print-data-button" style="" type="submit" action="#" value="Print">
+</div>
+<?php foreach ($this->result as $result) { ?>
+    <div class="print-data">
+        <div id="img-wrapper">
+            <img height="100" width="120" src="<?php echo $this->baseURL() . "/destiny/admin/uploads/" . $result['image_name']; ?>" />
+        </div>
+        <div class="clear"> </div>
+        <fieldset>
+            <fieldset>
+                <div class="span11"><legend><h4>Personal Information</h4></legend></div>
+                <div class="span12">
+                    <div class="span2"><label>Full Name</label></div>
+                    <div class="span3"><?php echo $result["name"]; ?></div>
+                    <div class="span2"><label>Guardian Name</label></div>
+                    <div class="span3"><?php echo $result["guardain_name"]; ?></div>
+                </div>
+                <div class="clear"></div>
+                <div class="span12">
+                    <div class="span2"><label>Date Of Birth</label></div>
+                    <div class="span3"><?php echo $result["dob"]; ?></div>
+                    <div class="span2"><label>Gender</label></div>
+                    <div class="span3"><?php echo $result["sex"]; ?></div>
+                </div>
+                <div class="clear"></div>
+                <div class="span12">
+                    <div class="span2"><label>Marital Status</label></div>
+                    <div class="span3"><?php echo $result["marital_status"]; ?></div>
+                    <div class="span2"><label>Religion</label></div>
+                    <div class="span3"><?php echo $result["religion"]; ?></div>
+                </div>
+                <div class="clear"></div>
+            </fieldset>
+            <fieldset>
+                <div class="span11"><legend><h4>Passport Details</h4></legend></div>
+                <div class="span12">
+                    <div class="span2"><label>Passport No.</label></div>
+                    <div class="span3"><?php echo $result["passport_no"]; ?></div>
+                    <div class="span2"><label>Bearer Name</label></div>
+                    <div class="span3"><?php echo $result["bearer_name"]; ?></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="span12">
+                    <div class="span2"><label>Issued Date</label></div>
+                    <div class="span3"><?php echo $result["passport_issued_date"]; ?></div>
+                    <div class="span2"><label>Expiry Date</label></div>
+                    <div class="span3"><?php echo $result["passport_expiry_date"]; ?></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="span12">
+                    <div class="span2"><label>Issued Place</label></div>
+                    <div class="span3"><?php echo $result["district_name"]; ?></div>
+                    <div class="clear"></div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="span11"><legend><h4>Academic Qualification</h4></legend></div>
+                <div class="span12">
+                    <div class="span2"><label>Educational Qualification</label></div>
+                    <div class="span3"><?php echo $result["educational_background"]; ?></div>
+                    <div class="clear"></div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="span11"><legend><h4>Occupation Details</h4></legend></div>
+                <div class="span12">
+                    <div class="span2"><label>Company Name</label></div>
+                    <div class="span3"><?php echo $result["company_name"]; ?></div>
+                    <div class="span2"><label>Profession</label></div>
+                    <div class="span3"><?php echo $result["profession"]; ?></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="span12">
+                    <div class="span2"><label>Salary</label></div>
+                    <div class="span3"><?php echo $result["salary"]; ?></div>
+                    <div class="span2"><label>Duty Hour</label></div>
+                    <div class="span3"><?php echo $result["duty_hour"]; ?></div>
+                </div>
+
+            </fieldset>
+        </fieldset>
+    </div>
+
+<?php } ?>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#print-data-button").live("click",function(){
+            var divToPrint= $(".print-data");
+            newWin = window.open(this.href);
+            newWin.document.write(divToPrint.html());
+            newWin.print();
+            location.reload();
+            newWin.stop();
+        }); 
+    });
+     
+     
+</script>

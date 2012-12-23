@@ -1,0 +1,15 @@
+<select id="visa_group" name="visa_group">
+
+    <?php
+    if ($this->results) {
+        echo "<option value=''>---Select---</option>";
+        foreach ($this->results as $val) {
+            ?>
+            <option value="<?php echo $val['visa_number']; ?>"><?php echo $val['visa_group']; ?></option>
+            <?php
+        }
+    } else {
+        echo "<option value=''>No Option Available</option>";
+    }
+    ?>
+</select>

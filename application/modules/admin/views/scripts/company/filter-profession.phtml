@@ -1,0 +1,14 @@
+<select id="ccat_id" name="ccat_id">
+    <?php
+    if ($this->results) {
+        echo "<option value=''>---Select---</option>";
+        foreach ($this->results as $val) {
+            ?>
+            <option value="<?php echo $val['ccat_id'] . "::" . $val['number']; ?>"><?php echo $val['profession']; ?></option>
+            <?php
+        }
+    } else {
+        echo "<option value=''>All professions already taken</option>";
+    }
+    ?>
+</select>

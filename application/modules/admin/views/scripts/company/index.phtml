@@ -1,0 +1,31 @@
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/table.css"); ?>
+<table id="table" >
+
+    <tr>
+        <th> Company Name  </th>
+        <th> ID Number  </th>
+        <th> Visa Number   </th>
+        <th> Issued Date  </th>
+        <th> Profession     </th>
+        <th> Number </th>
+        <th> Edit </th>
+        <th> Delete </th>
+    </tr>
+    <?php foreach ($this->result as $result): ?>
+
+        <tr>
+            <td><?php echo $result['company_name']; ?></td>
+            <td><?php echo $result['id_number']; ?></td>
+            <td><?php echo $result['visa_number']; ?></td>
+            <td><?php echo $result['date']; ?></td>
+            <td><?php echo $result['category']; ?></td>
+            <td><?php echo $result['number']; ?></td>
+            <td>
+                <a href="<?php echo $this->url(array('controller' => 'company', 'action' => 'edit', 'id' => $result['company_id'])); ?>">Edit </a>
+            </td>
+            <td>
+                <a href="<?php echo $this->url(array('controller' => 'company', 'action' => 'delete', 'id' => $result['company_id'])); ?>">Delete</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>

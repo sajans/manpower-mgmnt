@@ -1,0 +1,115 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php $form = $this->form->getElements(); ?>
+        <?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/bootstrap.css"); ?>
+        <?php
+        echo $this->headLink()
+                ->prependStylesheet($this->baseUrl() . '/destiny/admin/css/form.css')
+                ->prependStylesheet($this->baseUrl() . '/destiny/admin/css/style.css')
+                ->prependStylesheet($this->baseUrl() . '/destiny/admin/css/bootstrap.min.css')
+        ?>
+        <!-- Scripts -->
+        <?php
+        echo $this->headScript()->appendFile($this->baseUrl() . '/common/js/jquery-ui-1.8.21.custom.min.js');
+        echo $this->headScript()->appendFile($this->baseUrl() . '/common/js/jquery-1.7.2.min.js');
+        ?>
+    </head>
+    <fieldset>
+        <legend><h2>Add Medical Report </h2></legend>
+        <div class="form-wrap">
+            <form action="" method="post">
+                <fieldset class="span11">
+                    <div id="agent_span">
+                        <div class="span4"><?php echo $form["medical_id"]; ?></div>
+                    </div>
+                    <div class="span12" id="row2">
+                        <div class="span2"><label>Candidate Name</label></div>
+                        <div class="span5"><?php echo $form["candidate_id"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="span12" id="row2">
+                        <div class="span2"><label>Passport No.</label></div>
+                        <div class="span5"><?php echo $form["passport_no"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="span12" id="row2">
+                        <div class="span2"><label>Mofa No.</label></div>
+                        <div class="span5"><?php echo $form["mofa_no"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="span12" id="row2">
+                        <div class="span2"><label>Gamca No.</label></div>
+                        <div class="span5"><?php echo $form["gamca_no"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="span12" id="row2">
+                        <div class="span2"><label>Medical Center</label></div>
+                        <div class="span5"><?php echo $form["medical_center"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="span12" id="row2">
+                        <div class="span2"><label>Company Name</label></div>
+                        <div class="span5"><?php echo $form["add_company_id"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="span12" id="row2">
+                        <div class="span2"><label>ID Number</label></div>
+                        <div class="span5"><?php echo $form["id_number"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="span12" id="row2">
+                        <div class="span2"><label>Visa Group</label></div>
+                        <div class="span5"><?php echo $form["visa_group"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="span12" id="row2">
+                        <div class="span2"><label> Select Profession</label></div>
+                        <div class="span5"><?php echo $form["ccat_id"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="span12" id="row2">
+                        <div class="span2"><label>Visa No.</label></div>
+                        <div class="span5"><?php echo $form["visa_no"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div><?php echo $form['submit']; ?></div>
+                </fieldset>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#candidate_id").live("change",function(){
+                    var $that = $(this);
+                    var amount = $.trim($(this).val());
+                    var passportno = amount.split("::");
+                    $("#passport").val(passportno[2]);
+                }); 
+                $("#add_company_id").live("change",function(){
+                    var $that = $(this);
+                    var amount = $.trim($(this).val());
+                    var value = amount.split("::");
+                    $("#id_number").val(value[1]);
+                    $.ajax({
+                        url:site.baseUrl+'/admin/company/filter-visagroup/id/'+value[0]+'/format/json',
+                        success:function(res){
+                            $("#visa_group").replaceWith(res.html);
+                        }
+                    });
+                }); 
+                $("#visa_group").live("change",function(){
+                    var visaNumber = $(this).val();
+                    $("#visa_no").val(visaNumber);
+                    $.ajax({
+                        url:site.baseUrl+'/admin/company/filter-profession/id/'+visaNumber+'/format/json',
+                        success:function(res){
+                            $("#ccat_id").replaceWith(res.html);
+                        }
+                    });
+                })
+            });
+        </script>
+    </fieldset>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta type="content" charset="utf-8" >
+        <title> Destiny Placement Services </title>
+        <script type="text/javascript" src="<?php echo $this->baseUrl() . '/common/js/jquery-1.7.2.min.js'; ?>"></script>
+        <?php
+        echo $this->headScript()->appendFile($this->baseUrl() . "/common/js/jquery-ui-1.8.21.custom.min.js");
+        echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/style.css");
+        ?>
+        <script type="text/javascript">
+            site = {
+                'baseUrl':"<?php echo $this->baseUrl(); ?>"
+            };
+        </script>
+    </head>
+    <body>
+        <div id="top-navigation">
+            <div id="header-nav">
+                <ul id="menu-nav">       
+                    <li><a href="<?php echo $this->baseUrl() . '/admin'; ?>">Dashboard</a></li>
+                    <li><a href="<?php echo $this->baseUrl() . '/admin/staff/list'; ?>">Staff</a></li>
+                    <li><a href="<?php echo $this->baseUrl() . '/admin/agent/list'; ?>">Agent</a></li>
+                    <li><a href="<?php echo $this->baseUrl() . '/admin/candidate/list'; ?>">Candidates</a></li>
+                    <li><a href="<?php echo $this->baseUrl() . '/admin/medical/list'; ?>">Medical</a></li>
+                    <li><a href="<?php echo $this->baseUrl() . '/admin/stamping/list'; ?>">Stamping</a></li>
+                    <li><a href="<?php echo $this->baseUrl() . '/admin/orientation/list'; ?>">Orientation</a></li>
+                    <li><a href="<?php echo $this->baseUrl() . '/admin/category'; ?>">Category</a></li>
+                    <li><a href="<?php echo $this->baseUrl() . '/admin/company'; ?>">Company</a></li>
+                    <?php if (Zend_Auth::getInstance()->hasIdentity()) { ?>
+                        <li><a href="<?php echo $this->baseUrl() . '/admin/login/logout'; ?>">Logout</a></li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+        <div class='clear'></div>
+        <div id="container">
+            <div id="flash-messages">
+                <?php
+                $flashMessenger = $this->flashMessages();
+                print $flashMessenger->getMessages();
+                ?>
+            </div>
+            <div>
+                <?php echo $this->layout()->content; ?>
+            </div><div class='clear'></div>
+        </div>
+        <div id="footer-wrapper">
+            <div id="footer-nav">
+                Copyright (c) Fourfox Inc. 2012
+            </div>
+        </div>
+    </body>
+</html>

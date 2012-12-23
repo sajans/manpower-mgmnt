@@ -1,0 +1,112 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php $form = $this->form->getElements(); ?>
+        <?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/bootstrap.css"); ?>
+        <?php
+        echo $this->headLink()
+                ->prependStylesheet($this->baseUrl() . '/destiny/admin/css/form.css')
+                ->prependStylesheet($this->baseUrl() . '/destiny/admin/css/style.css')
+                ->prependStylesheet($this->baseUrl() . '/destiny/admin/css/bootstrap.min.css')
+        ?>
+        <!-- Scripts -->
+        <?php
+        echo $this->headScript()->appendFile($this->baseUrl() . '/common/js/jquery-1.7.2.min.js');
+        ?>
+    </head>
+
+
+    <div class="form-wrap">
+        <form enctype="multipart/form-data" action="" method="post">
+            <fieldset> 
+                <legend class="span12"><div id="legend-center"><h3>Add Candidate</h3></div></legend>
+                <div id="agent_span">
+                    <div><label>Agent Name</label></div>
+                    <div class="span4"><?php echo $form["agent_id"]; ?></div>
+                    <div><?php echo $form["candidate_id"]; ?></div>
+                </div>
+
+                <fieldset>
+                    <div class="span11"><legend><h4>Personal Information</h4></legend></div>
+                    <div class="span12">
+                        <div class="span2"><label>Full Name</label></div>
+                        <div class="span3"><?php echo $form["name"]; ?></div>
+                        <div class="span2"><label>Guardian Name</label></div>
+                        <div class="span3"><?php echo $form["guardain_name"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="span12">
+                        <div class="span2"><label>Date Of Birth</label></div>
+                        <div class="span3"><?php echo $form["dob"]; ?></div>
+                        <div class="span2"><label>Gender</label></div>
+                        <div class="span3"><?php echo $form["sex"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="span12">
+                        <div class="span2"><label>Upload Photo</label></div>
+                        <div class="span3"><?php echo $form["image_name"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="span12">
+                        <div class="span2"><label>Marital Status</label></div>
+                        <div class="span3"><?php echo $form["marital_status"]; ?></div>
+                        <div class="span2"><label>Religion</label></div>
+                        <div class="span3"><?php echo $form["religion"]; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                </fieldset>
+
+
+                <fieldset>
+                    <div class="span11"><legend><h4>Passport Details</h4></legend></div>
+                    <div class="span12">
+                        <div class="span2"><label>Passport No.</label></div>
+                        <div class="span3"><?php echo $form["passport_no"]; ?></div>
+                        <div class="span2"><label>Bearer Name</label></div>
+                        <div class="span3"><?php echo $form["bearer_name"]; ?></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="span12">
+                        <div class="span2"><label>Issued Date</label></div>
+                        <div class="span3"><?php echo $form["passport_issued_date"]; ?></div>
+                        <div class="span2"><label>Expiry Date</label></div>
+                        <div class="span3"><?php echo $form["passport_expiry_date"]; ?></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="span12">
+                        <div class="span2"><label>Issued Place</label></div>
+                        <div class="span3"><?php echo $form["address"]; ?></div>
+                        <div class="clear"></div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="span11"><legend><h4>Academic Qualification</h4></legend></div>
+                    <div class="span12">
+                        <div class="span2"><label>Educational Qualification</label></div>
+                        <div class="span3"><?php echo $form["educational_background"]; ?></div>
+                        <div class="clear"></div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="span11"><legend><h4>Occupation Details</h4></legend></div>
+                    <div class="span12">
+                        <div class="span2"><label>Company Name</label></div>
+                        <div class="span3"><?php echo $form["company_name"]; ?></div>
+                        <div class="span2"><label>Profession</label></div>
+                        <div class="span3"><?php echo $form["profession"]; ?></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="span12">
+                        <div class="span2"><label>Salary</label></div>
+                        <div class="span3"><?php echo $form["salary"]; ?></div>
+                        <div class="span2"><label>Duty Hour</label></div>
+                        <div class="span3"><?php echo $form["duty_hour"]; ?></div>
+                    </div>
+                </fieldset>
+                <div><?php echo $form['submit']; ?></div>
+            </fieldset>
+        </form>
+    </div>

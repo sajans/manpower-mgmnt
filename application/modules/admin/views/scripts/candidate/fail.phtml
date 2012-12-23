@@ -1,0 +1,43 @@
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/table.css"); ?>
+<table id="table" >
+
+    <tr>
+        <th> Full Name     </th>
+        <th> Passport No.      </th>
+        <th> DOB </th>
+        <th> Sex </th>
+        <th> Guardian Name </th>
+        <th> Marital Status </th>
+        <th> Religion </th>
+        <th> Agent </th>
+        <th> Applied Country </th>
+        <th> Profession </th>
+        <th> Salary </th>
+        <th> Duty Hour </th>
+        <th> Company Name </th>
+        <th> Education </th>
+        <th> Delete</th>
+    </tr>
+    <?php foreach ($this->result as $result): ?>
+
+        <tr>
+            <td><?php echo $result['name']; ?></td>
+            <td><?php echo $result['passport_no']; ?></td>
+            <td><?php echo $result['dob']; ?></td>
+            <td><?php echo $result['sex']; ?></td>
+            <td><?php echo $result['guardain_name']; ?></td>
+            <td><?php echo $result['marital_status']; ?></td>
+            <td><?php echo $result['religion']; ?></td>
+            <td><?php echo $result['agent_name']; ?></td>
+            <td><?php echo $result['applied_country']; ?></td>
+            <td><?php echo $result['profession']; ?> </td>
+            <td><?php echo $result['salary']; ?> </td>
+            <td><?php echo $result['duty_hour']; ?> </td>
+            <td><?php echo $result['company_name']; ?></td>
+            <td><?php echo $result['educational_background']; ?></td>
+            <td>
+                <a href="<?php echo $this->url(array('controller' => 'candidate', 'action' => 'delete', 'id' => $result['candidate_id'])); ?>">Delete</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>

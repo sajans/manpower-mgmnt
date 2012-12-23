@@ -1,0 +1,50 @@
+<?php $form = $this->form->getElements(); ?>
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/style.css"); ?>
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/table.css"); ?>
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/staff-registration.css"); ?>
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/bootstrap.min.css"); ?>
+<div class="form-wrap">
+    <form action="" method="post">
+        <div class="header">Add Candidate</div>
+        <div class="span6">
+            <label>Full Name</label>
+            <div class="span4">
+                <?php echo $form["name"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["passport_no"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["dob"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["sex"]; ?>
+            </div>
+            <div class="bar1">
+                <?php echo $form["guardain_name"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["marital_status"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["religion"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["agent_id"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["profession"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["salary"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["duty_hour"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["company_name"]; ?>
+            </div>
+            <div class="bar2">
+                <?php echo $form["educational_background"]; ?>
+            </div>
+        </div>

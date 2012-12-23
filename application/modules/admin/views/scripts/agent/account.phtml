@@ -1,0 +1,122 @@
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/table.css"); ?>
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . "/destiny/admin/css/style.css"); ?>
+<script type="text/javascript" src="<?php echo $this->baseUrl() . '/common/js/jquery-ui-1.8.21.custom.min.js'; ?>"></script> 
+<script type="text/javascript" src="<?php echo $this->baseUrl() . '/common/js/jquery-1.7.2.min.js'; ?>"></script> 
+
+<div id=agent_name><?php
+if ($this->results) {
+    echo "<h2>Agent Name : " . $this->results[0]['agent_name'] . "</h2>";
+    ?></div> <div class="clear"></div>
+    <table id="table">
+        <tr>
+            <th>
+                S. No.
+            </th>
+            <th>
+                Candidate Name
+            </th>
+            <th>
+                Passport No
+            </th>
+            <th>
+                Amount( in Rs)
+            </th>
+            <th>
+                Paid Amount( in Rs)
+            </th>
+            <th>
+                Due Amount ( in Rs)
+            </th>
+            <th>
+                Total Amount( in Rs)
+            </th>
+            <th>
+                &nbsp;
+            </th>
+        </tr>
+        <?php
+        $i = 1;
+        $dueAmount = 0;
+        $totalAmount = 0;
+        ?>
+        <?php foreach ($this->results as $key => $result) { ?>
+            <?php
+            $dueAmount = $dueAmount + $result['due_amount'];
+            $totalAmount = $totalAmount + $result['total_amount'];
+            ?>
+            <tr>
+            <form action=""  method="post" name="account-update">
+                <td class="SN">
+                    <?php echo $i++; ?>
+                </td>
+                <td>
+                    <input type="hidden" value="<?php echo $result['account_id']; ?>" name="account_id" />
+                    <?php echo $result['name']; ?>
+                </td>
+                <td>
+                    <?php echo $result['passport_no']; ?>
+                </td>
+                <td>
+                    <input class="amount-paid" type="text" name="amount" value=""/>
+                </td>
+                <td>
+                    <div class="amount-given">
+                        <?php echo $result['amount']; ?>
+                    </div>
+                    <input class="amount" type="hidden" name="amountvalue" value="<?php echo $result['amount']; ?>" />
+                </td>
+                <td>
+                    <div class="due-amount-to">
+                        <?php echo $result['due_amount']; ?>
+                    </div>
+                    <input class="due_amount" type="hidden" name="due_amount" value="<?php echo $result['due_amount']; ?>" />
+                </td>
+                <td>
+                    <div class="total_maximum_amount">
+                        <?php echo $result['total_amount']; ?>
+                    </div>
+                    <input class="total_amount" type="hidden" name="total_amount" value="<?php echo $result['total_amount']; ?>"/> 
+                </td>
+                <td><input type="submit" name="submit" value="update" /></td>
+            </form>
+        </tr>    
+        <?php
+    }
+    ?>
+
+    </table>
+    <div id="amount">
+        <div id="due_amount">
+            <?php echo "Due Amount:" ?>
+            <?php echo $dueAmount; ?> 
+        </div>
+        <div id="total_amount">
+            <?php echo "Total Amount:" ?>  
+            <?php echo $totalAmount; ?>
+        </div></div>
+    <?php
+} else {
+    echo "No Candidates found for this agent";
+}
+?>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".amount-paid").live("blur",function(){
+            var $that = $(this);
+            var amount = Number($.trim($(this).val()));
+            var dueamount = Number($(this).parents("tr:first").find(".due_amount").val());
+            var totalamount = Number($(this).parents("tr:first").find(".total_amount").val());
+            var originalamount = Number($(this).parents("tr:first").find(".amount").val());
+            var newdueamount = dueamount - amount;
+            var newamount = originalamount + amount;
+            // $that.parents("tr:first").find(".due_amount").val(newdueamount);
+            // $that.parents("tr:first").find(".amount").val(newamount);
+            $that.parents("tr:first").find(".amount-given").html(newamount);
+            $that.parents("tr:first").find(".due-amount-to").html(newdueamount);
+                       
+            
+            
+             
+        }); 
+    });
+</script>
